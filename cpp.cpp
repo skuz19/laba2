@@ -13,9 +13,7 @@ bool validtime(int num) {
         if (hours >= 0 && hours <= 23 && minutes >= 0 && minutes <= 59) {
             //проверка на корректное количество цифр в минутах
             if ((divider == 1 && minutes < 10) ||    // для формата X:Y 
-                (divider == 10 && minutes < 100) ||  // для формата XX:YY 
-                (divider == 100 && minutes < 1000) || // для формата X:YYY 
-                (divider == 1000)) {                 // для формата XX:YYY
+                (divider == 10 && minutes < 100)) {  // для формата XX:YY  
                 return true; // возвращаем true если все условия выполнены
             }
         }
